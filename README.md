@@ -10,64 +10,74 @@
 
 ## 1. Introduction
 
-This is a print &amp; play game inspired by *chess*, *war games* and the roman *ludus latrunculorum*. I invite you to play it, express opinions and ideas, discuss it with me on [discord](https://discord.com/invite/QFY5Qe8) or even tell me this exists already. It's an abstract strategy game where both players fight with sets of pieces, including one leader each, the "Dux". Your goal is to either take the opposing Dux or all pieces under their command. Slightly different rules apply to each type of piece. All pieces of both players act before any single one may act again.
-
-Warning: I haven't tested this game much, just had the idea wrote rules and made a board, then played two rounds with my dad.
+Ludus Cyclorum is a print &amp; play game inspired by *chess*, *war games* and (thematically) the roman *ludus latrunculorum*. It is an abstract strategy game where you and an opponent fight by taking turns, acting with one piece each. Your pieces, with varying rules for movement and attacks, are led by your "Dux". You win once the opposing Dux is taken or left without allies. Every piece on the board must be activated once before any single one may be used again. Whenever all pieces have been activated, a "cycle" is completed, hence the name "Ludus Cyclorum" - the game of cycles. I invite you to play it, share opinions and ideas or discuss with me [on discord](https://discord.com/invite/QFY5Qe8).
 
 ## 2. How to Play
 
-First you should read the rules, there aren't very many. There's no TTS version as of now. For physical play you'll need a board and pieces. The board is available in the repository: "board.pdf". Instead of printing it you can also just draw the lines on a piece of paper. I created my set of pieces by using german cents which I cleaned and then drew on with a metal marker. What to draw on your pieces is described in the rules. Using something that you can easily flip over is essential.
+First you should read the rules, there aren't very many. There's no TTS version as of now. For physical play you'll need a board and the pieces. An image of the board I use is available in the repository as "board.pdf". Instead of printing it you can also just draw the lines on a piece of paper. I created my set of pieces by using german cents which I cleaned and then drew on with a marker. What to draw on your pieces can be seen in the rules (but this is of course ultimately up to you). Using a base that you can easily flip over is essential.
 
 ## 3. Rules
 
-The current board and starting position look like this: ![image](assets/ludus-cyclorum-full-board.svg)
+The current board and starting positions look like this: ![image](assets/ludus-cyclorum-full-board.svg)
 
-As you can see pieces (from now on called stones) are placed on line intersections. The arrows on the stones indicate which player they belong to. The dot in the center of each stone indicates its "phase". Next to the board lays the phase-marker. The back and front of each stone (and the phase-marker) are identical, but one side features the dot and the other instead a tilde. Around the dots you can see the "symbol" of each stone. Crosses are Dux, triangles are spears, squares are shields, eyes are swords and riders remain.
+As you can see, pieces (from now on called stones) are placed on line intersections. The arrows on the stones indicate which player they belong to (if the arrow points towards you, it is yours). The dot in the center of each stone indicates its current "phase". Next to the board is the "cycle-indicator". The back and front of each stone (and the cycle-indicator) are mostly identical, only one side features the dot and the other instead a tilde (representing ebb and flow). All stones also feature their "symbol": crosses are Dux, triangles are spears, squares are shields, eyes are swords and riders remain.
 
-Now for the rules:
-1. Determine the starting player somehow
-2. Win by taking the opposing Dux or their party
-3. Players go back and forth "acting" with a single stone each, then flipping it over
-   1. Only stones that match the phase of the phase-marker may be used ("active" stones)
-   2. If you still have active stones and your opponent doesn't continue alone until yours are all inactive too
-   3. You must always act with one stone (though you can choose to idle, simply flipping one)
-4. When all stones of both players are inactive immediately flip over the phase-marker (you've completed a cycle)
-   1. If you just acted it is now your opponent's turn
-5. The actions that may be performed with stones are the following:
-   1. Move as many tiles as the stone symbol allows
-   2. Attack another stone using the range specified by the attacker's symbol, removing the defender from the board (this does not move the attacker)
-   3. Rush: A combined action of moving first, then attacking in the direction of movement
-6. If a stone moves out of the attack range of another, active stone, that other stone may perform an attack of opportunity, becoming inactive and removing the stone that attempted to move
-7. Friendly fire is allowed
+Now for the complete rules:
+1. Set up the board and pieces as shown in the graphic
+2. Your win condition is to take the opposing Dux or their party
+3. Determine the starting player somehow (rock-paper-scissors, dice, etc.)
+4. You and your opponent go back and forth "acting" with a single one of your stones, then flipping it over (indicating that it is "active", or "busy")
+   1. Only stones that match the current phase of the cycle-indicator ("inactive" stones) may be used
+   2. If you still have inactive stones and your opponent doesn't: continue alone until yours are all active too
+   3. You **must** always act with one stone (though you can choose to have it "idle" by just flipping it)
+5. Once all stones on the board are active immediately flip over the cycle-indicator (as you have now completed a cycle)
+   1. All stones are now automatically inactive again, because their phase does not match the cycle-indicator
+   2. If you just acted it is now your opponent's turn
+6. The actions you may perform with a stone are the following:
+   1. Move it as many tiles as its symbol allows
+   2. Attack another stone with it, according to the "range" of the symbol, removing the defending stone from the board (your attacker remains stationary)
+   3. Rush: a combined action of moving first, then attacking in the same direction
+7. If any stone moves out of the attack range of another, inactive stone, that other stone *may* perform an "attack of opportunity", becoming active and taking the stone that attempted to move
+8. You are allowed to take your own stones through attacks
 
 ### Stone Symbols
 
-Assume that by default each symbol moves one space and attacks with a range of one. Each symbol has some special rules, listed below:
+Assume that by default each symbol can move one space and attacks with a range of one. Each symbol has some special rules, which are listed below:
 
 > **Sword**
 >
-> May attack and move (in any order) in a single action.
+> - May attack and move in any order during a single action
+> 
+> *An agile fighter*
 
 > **Shield**
 >
-> Can only be taken while inactive and becomes inactive when attempted to be taken while active.
+> - Can optionally become active, instead of being taken while inactive
+>
+> *Raises its shield against attacks, but cannot defend when already engaged*
 
 > **Rider**
 >
-> Has no regular attack.
-> May move up to 3 tiles, on each step not repeating the previous tile.
-> Can trample (jump) over another stone (landing on an empty tile), taking it, using two tiles of movement.
-> Can take with a "passing slash" on the second or third tile of movement, by moving between two positions adjacent to another stone, but only once per action.
-> Trampling and passing slashes cannot be combined.
+> - Cannot be targeted for attacks of opportunity and may not perform them either
+> - Moves up to 2 tiles, on each step not repeating the previous tile
+> - Has no regular attack, but may instead "trample" or perform a "passing slash" on the second tile of movement
+> - Trample: takes by jumping *straight* over another stone (needs to land on an unoccupied tile; this uses a single "point" of movement despite the distance of two tiles)
+> - Passing slash: takes by transitioning between two positions adjacent to another stone
+>
+> *Mounted high up, it is elusive, but has difficulty striking downwards - It charges into very mobile attacks*
 
 > **Spear**
 >
-> Attacks only exactly at a range of 2 and only straight (possibly "through" allied stones, without harming them).
-> If trampled or rushed the attacker is also taken.
+> - Attacks *only exactly* at a range of 2 (not 1) and *only straight* (possibly "through" allied stones, without harming them)
+> - If trampled or rushed (except by shielded stones) the attacker is optionally also taken
+>
+> *Its enhanced range provides both offensive and defensive advantages, yet introduces blindspots*
 
 > **Dux**
 >
-> Has the "abilities" of both sword and shield and can pierce through shields.
+> - Has the "abilities" of both sword and shield and can take regular shield stones that are inactive
+>
+> *Your most important stone, yet too strong not to fight, right?*
 
 ## 4. Variation and Exploration
 
