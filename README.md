@@ -10,11 +10,13 @@
 
 ## 1. Introduction
 
-Ludus Cyclorum is a print &amp; play game inspired by *chess*, *war games* and (thematically) the roman *ludus latrunculorum*. It is an abstract strategy game where you and an opponent fight by taking turns, acting with one piece each. Your pieces, with varying rules for movement and attacks, are led by your "Dux". You win once the opposing Dux is taken or left without allies. Every piece on the board must be activated once before any single one may be used again. Whenever all pieces have been activated, a "cycle" is completed, hence the name "Ludus Cyclorum" - the game of cycles. I invite you to play it, share opinions and ideas or discuss with me [on discord](https://discord.com/invite/QFY5Qe8).
+Ludus Cyclorum is a print &amp; play game inspired by *chess*, *war games* and (thematically) the roman *ludus latrunculorum*. It is an abstract strategy game where you and an opponent fight by taking turns, acting with one piece each. Your pieces, with varying rules for movement and attacks, are led by your "Dux". You win once the opposing Dux is taken or left without allies. Every piece on the board must be activated before any single one may be used again. Whenever all pieces have been activated, a "cycle" is completed, hence the name "Ludus Cyclorum" - the game of cycles. I invite you to play it, share opinions and ideas or discuss with me [on discord](https://discord.com/invite/QFY5Qe8).
 
 ## 2. How to Play
 
-First you should read the rules, there aren't very many. There's no TTS version as of now. For physical play you'll need a board and the pieces. An image of the board I use is available in the repository as "board.pdf". Instead of printing it you can also just draw the lines on a piece of paper. I created my set of pieces by using german cents which I cleaned and then drew on with a marker. What to draw on your pieces can be seen in the rules (but this is of course ultimately up to you). Using a base that you can easily flip over is essential.
+First you should read the rules, there aren't very many. To play digitally I made a rudimentary draft for Tabletop Simulator, which is available on the [steam workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3402161640).
+
+For physical play you'll need a board and the pieces. An image of the board I use is available in the repository as "board.pdf". Instead of printing it you can also just draw the lines on a piece of paper. I created my set of pieces by using german cents which I cleaned and then drew on with a marker. What to draw on your pieces can be seen in the rules (but this is of course ultimately up to you). Using a base that you can easily flip over is essential.
 
 ## 3. Rules
 
@@ -25,12 +27,12 @@ As you can see, pieces (from now on called stones) are placed on line intersecti
 Now for the complete rules:
 1. Set up the board and pieces as shown in the graphic
 2. Your win condition is to take the opposing Dux or their party
-3. Determine the starting player somehow (rock-paper-scissors, dice, etc.)
-4. You and your opponent go back and forth "acting" with a single one of your stones, then flipping it over (indicating that it is "active", or "busy")
+3. Determine the starting player somehow (coin flip, rock-paper-scissors, dice, etc.)
+4. You and your opponent go back and forth "activating" a single one of your stones, then flipping it over (indicating that it is now "active", or "busy")
    1. Only stones that match the current phase of the cycle-indicator ("inactive" stones) may be used
    2. If you still have inactive stones and your opponent doesn't: continue alone until yours are all active too
    3. You **must** always act with one stone (though you can choose to have it "idle" by just flipping it)
-5. Once all stones on the board are active immediately flip over the cycle-indicator (as you have now completed a cycle)
+5. Once all stones on the board are active immediately flip over the cycle-indicator (as you have just completed a cycle)
    1. All stones are now automatically inactive again, because their phase does not match the cycle-indicator
    2. If you just acted it is now your opponent's turn
 6. The actions you may perform with a stone are the following:
@@ -38,11 +40,11 @@ Now for the complete rules:
    2. Attack another stone with it, according to the "range" of the symbol, removing the defending stone from the board (your attacker remains stationary)
    3. Rush: a combined action of moving first, then attacking in the same direction
 7. If any stone moves out of the attack range of another, inactive stone, that other stone *may* perform an "attack of opportunity", becoming active and taking the stone that attempted to move
-8. You are allowed to take your own stones through attacks
+8. You are allowed to take your own stones with attacks
 
 ### Stone Symbols
 
-Assume that by default each symbol can move one space and attacks with a range of one. Each symbol has some special rules, which are listed below:
+Assume that by default all symbols can move one space and attack with a range of just one. Each symbol has some special rules, which are listed below:
 
 > **Sword**
 >
@@ -59,8 +61,8 @@ Assume that by default each symbol can move one space and attacks with a range o
 > **Rider**
 >
 > - Cannot be targeted for attacks of opportunity and may not perform them either
-> - Moves up to 2 tiles, on each step not repeating the previous tile
-> - Has no regular attack, but may instead "trample" or perform a "passing slash" on the second tile of movement
+> - Moves up to 2 tiles, not repeating the previous tile
+> - Has no regular attack, but may instead - *on the second tile of movement* - "trample" or perform a "passing slash"
 > - Trample: takes by jumping *straight* over another stone (needs to land on an unoccupied tile; this uses a single "point" of movement despite the distance of two tiles)
 > - Passing slash: takes by transitioning between two positions adjacent to another stone
 >
@@ -75,21 +77,21 @@ Assume that by default each symbol can move one space and attacks with a range o
 
 > **Dux**
 >
-> - Has the "abilities" of both sword and shield and can take regular shield stones that are inactive
+> - Has the "abilities" of both sword and shield and can bypass the defense of regular shield stones
 >
 > *Your most important stone, yet too strong not to fight, right?*
 
 ## 4. Variation and Exploration
 
-There are many things you can play around with and that I may explore whenever I feel like thinking about this game more, I'll simply list some here:
+There are many things you can play around with and that may be explored, e.g.:
 
-1. Some of the current symbol rules seem a little clunky, specifically aspects of the spear and rider.
+1. Are some of the current symbol rules a little clunky, specifically aspects of the spear and rider?
 2. As there are two different phases, maybe some rules could be different depending on the current phase.
 3. There could be more or less starting stones.
 4. There could be more, less and different kinds of stone symbols.
 5. Players could start by placing stones down in custom formations or choose from a set of existing ones.
 6. The board could have a different size, shape or orientation.
-7. One could use a physical marker placed on stnoes, instead of flipping them over.
-8. Stone mechanics could be further explored or existing ones turned into global rules, like stones being able to block like the shield by going inactive.
-9. Tiles could have different "terrain" that affects stones placed on them, creating potential for different maps
-10. In general, exploration of more war game mechanics could be interesting, like having a list of stone symbols online (probably removing specific interactions like between spear and rider), players showing up with custom armies, then dropping them in custom formations at the start
+7. One could use a physical marker placed on stones, instead of flipping them over.
+8. Stone mechanics could be further explored or existing ones turned into global rules, like all stones being able to block like the shield by going inactive.
+9. Tiles could have different "terrain" or "height" that affects stones placed on them, creating potential for different maps
+10. In general, exploration of more war game mechanics could be interesting, like having a list of stone symbols online (probably removing specific interactions like between spear and rider), players showing up with custom armies, etc.
